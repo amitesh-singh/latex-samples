@@ -1,0 +1,9 @@
+digraph heirarchy {
+     //nodesep=1.0; //increase separation between nodes
+     node [color=red, fontname=Courier, shape=box] //All nodes will have same color and shape.
+     edge [color=blue, style=dashed] // all lines will look like this.
+
+     HeadTeacher->{Deputy1 Deputy2 Deputy3}
+     Deputy1->{Teacher1 Teacher2}
+     Deputy3->{Manager1 Manager2}
+}
