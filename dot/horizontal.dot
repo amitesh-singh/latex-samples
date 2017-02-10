@@ -1,0 +1,12 @@
+//dot -Txdot file.dot | dot2tex > file.tex
+
+
+digraph ER{
+     nodesep=1.0;
+     node[shape=box];
+     host;
+     device;
+     {rank=same;host,device}
+     host->device;
+     device->host;
+}
