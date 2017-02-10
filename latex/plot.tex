@@ -1,0 +1,40 @@
+\documentclass[12pt]{book}
+
+%include both of these pkgs
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\newcommand{\plotfun}[3][6cm]
+{
+\begin{tikzpicture}
+\begin{axis}
+[width=#1,grid=major,samples=100,mark=none]
+\addplot[blue,very thick,domain=#3]
+{#2};
+\end{axis}
+
+\end{tikzpicture}
+}
+
+
+\begin{document}
+
+\section{plot1}
+
+\plotfun{cos(x)}{-180:180}
+
+\section{plot2}
+
+\plotfun{x^2}{-20:20}
+
+\section{mixing functions}
+
+\plotfun{(sin(x)*ln(x+1))/2}{0:100}
+
+\section{random numbers}
+
+\plotfun{rnd}{-20:20}
+
+\plotfun{x^3}{-1:1}
+
+\end{document}
