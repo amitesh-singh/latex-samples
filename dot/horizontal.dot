@@ -1,12 +1,11 @@
 //dot -Txdot file.dot | dot2tex > file.tex
-
+//dot -Tpdf horizontal.dot -o horizontal_inc.pdf
 
 digraph ER{
      nodesep=1.0;
-     node[shape=box];
-     host;
-     device;
+     host[label="usb host", shape=box, style=filled, fillcolor=lightgrey];
+     device[label="usb device", shape=box];
      {rank=same;host,device}
-     host->device;
-     device->host;
+     host->device[label="send 0b001"];
+     device->host[label="send 0b100"];
 }
