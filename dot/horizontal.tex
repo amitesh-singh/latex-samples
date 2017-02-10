@@ -1,0 +1,21 @@
+%
+% first compile dot -Tpdf horizontal.dot -o horizontal_inc.pdf
+% and then use that pdf like below. looks cool though
+%
+
+\documentclass{article}
+
+\usepackage{pdfpages}
+
+\begin{document}
+
+\section{USB}
+\begin{figure}
+\includegraphics[bb = 0 10 100 100]{horizontal_inc.pdf}
+\caption{USB communication}
+\label{fig:usbcomm}
+\end{figure}
+This is really interesting to see how usb host talks to 
+usbdevice. \ref{fig:usbcomm}
+
+\end{document}
