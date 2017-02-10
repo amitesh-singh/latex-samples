@@ -1,0 +1,7 @@
+digraph graphname{
+     host [label="USB Host"];
+     device [label="USB device"];
+
+     host->device [label="send 0b001", fontcolor=blue];
+     device->host [label="send 0b1001", fontcolor=green];
+}
